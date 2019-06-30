@@ -1,1 +1,19 @@
-<p>question works!</p>
+<div style = "text-align: center">
+    <h2>Press the Button to Grab a Question<br>Do your best to answer it as exactly as possible!</h2>
+    <button id = "getStuff" (click)="getTheThing()">Retrieve a Question</button>
+    <h3> Question: {{question.question}}</h3><br><br>
+    <h2>Enter Your Answer Here!</h2>
+    <input type="text" name="Answer" id="answerEntry"
+    [(ngModel)]="answerField" (keydown.enter)="goodAnswer()"><p></p>
+    <button (click)="givingUp()">Give Up?</button>
+    <div *ngIf="this.answerField == null">
+        <p>
+            Answer Already!
+        </p>
+    </div>
+    <div *ngIf="this.answerField == this.question.answer || this.giveUp == 1">
+        <h2>Correct Answer: {{question.answer}}</h2>
+        
+    </div>
+</div>
+
