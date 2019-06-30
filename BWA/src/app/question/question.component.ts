@@ -24,7 +24,7 @@ export class QuestionComponent implements OnInit {
   getTheThing():void{
     this.questionService.getQuestion().subscribe((q) => {
       this.question = q[0];
-      this.question.newAnswer = this.question.answer;
+
       console.log(q[0])
       this.giveUp = 0;
 

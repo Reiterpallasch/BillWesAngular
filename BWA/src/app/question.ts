@@ -1,5 +1,5 @@
 export class Question{
-
-newAnswer:String;
+question:String;
+answer:String;
 
 }
