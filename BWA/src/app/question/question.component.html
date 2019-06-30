@@ -6,14 +6,17 @@
     <input type="text" name="Answer" id="answerEntry"
     [(ngModel)]="answerField" (keydown.enter)="goodAnswer()"><p></p>
     <button (click)="givingUp()">Give Up?</button>
-    <div *ngIf="this.answerField == null">
+    <div *ngIf="this.answerField == null && this.giveUp == 0;else nothing">
         <p>
             Answer Already!
         </p>
     </div>
+    <ng-template #nothing>
+      <p>Sry</p>
+    </ng-template>
     <div *ngIf="this.answerField == this.question.answer || this.giveUp == 1">
         <h2>Correct Answer: {{question.answer}}</h2>
-        
+
     </div>
 </div>
 
