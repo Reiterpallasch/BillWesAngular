@@ -14,18 +14,22 @@ export class QuestionComponent implements OnInit {
   @Input() myAnswer: Question;
   constructor(private questionService: QuestionService) { }
   giveUp:number;
+  newAnswer:String;
   ngOnInit() {
 
     this.question = new Question();
-    this.giveUp = 0;  
-    
+    this.giveUp = 0;
+
   }
   getTheThing():void{
     this.questionService.getQuestion().subscribe((q) => {
       this.question = q[0];
+      this.question.newAnswer = this.question.answer;
       console.log(q[0])
       this.giveUp = 0;
+
     });
+
   }
   givingUp():void{
     this.giveUp = 1;

@@ -14,8 +14,8 @@
     <ng-template #nothing>
       <p>Nvm</p>
     </ng-template>
-    <div *ngIf="this.answerField == this.question.answer || this.giveUp == 1">
-        <h2>Correct Answer: {{question.answer}}</h2>
+    <div *ngIf="this.answerField == this.question.newAnswer || this.giveUp == 1">
+        <h2>Correct Answer: {{question.newAnswer}}</h2>
 
     </div>
 </div>

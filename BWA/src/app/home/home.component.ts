@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  title:String = 'BWA';
+  title:String = ' the Obtuse Multi-API Capable System';
   constructor() { }
 
   ngOnInit() {
