@@ -14,7 +14,7 @@ export class QuestionComponent implements OnInit {
   @Input() myAnswer: Question;
   constructor(private questionService: QuestionService) { }
   giveUp:number;
-  newAnswer:String;
+
   ngOnInit() {
 
     this.question = new Question();
